@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | BlockeShop</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS file Link -->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+  </head>
+  <body>
+    <header>
+      <div class="main-header sticky">
+        <button
+          style="border: none; background-color: #fff"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <ion-icon
+            name="menu-outline"
+            class="margin-left header-icon"
+          ></ion-icon></button
+        ><a href="index.html">
+          <img class="header-logo" src="img/logo.jpg" alt="BlockeShop Logo"
+        /></a>
+
+        <div class="search-bag-container margin-right">
+          <ion-icon
+            name="search-outline"
+            id="search-icon"
+            class="position-relative header-icon"
+          ></ion-icon>
+          <div>
+            <ion-icon
+              name="bag-outline"
+              class="header-icon"
+              id="toggle-offcanvas"
+            ></ion-icon>
+            <span
+              class="position-absolute bottom-10 start-200 translate-middle badge rounded-pill bg-danger cart-number-badge"
+            >
+              0
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Modal -->
+
+      <div class="modal-search2" id="search2-modal">
+        <div class="modal-content-search2">
+          <div class="modal-header-search2">
+            <div class="modal-body-search2">
+              <input
+                type="text"
+                class="search2"
+                placeholder="Enter your search term"
+              />
+              <div>
+                <button class="search2-button">Search</button>
+              </div>
+              <div>
+                <ion-icon
+                  name="close-outline"
+                  class="close-search2"
+                  aria-hidden="true"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nav Bar  -->
+      <nav class="Navbar">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="hoodie/1.html" class="nav-link">Hoodie</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="premium-tshirts/1.html" class="nav-link"
+              >Premium T-Shirts</a
+            >
+          </li>
+          <li class="nav-list-item">
+            <a href="budget-tshirts/1.html" class="nav-link">Budget T-Shirts</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Off Canvas Navbar -->
+      <div
+        class="offcanvas offcanvas-start"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+        tabindex="-1"
+        id="offcanvasScrolling"
+        aria-labelledby="offcanvasScrollingLabel"
+      >
+        <div class="offcanvas-header">
+          <div></div>
+          <ion-icon
+            type="button"
+            class="text-reset btn-close-custom"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+            name="close-sharp"
+          ></ion-icon>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="canvas-links">
+            <!-- Create a search Box  -->
+            <li class="canvas-links-item">
+              <form class="search-box">
+                <input
+                  type="text"
+                  class="search-box-input"
+                  placeholder="Search"
+                />
+                <button class="search-box-btn" type="submit">
+                  <ion-icon
+                    name="search-outline"
+                    class="search-box-icon"
+                  ></ion-icon>
+                </button>
+              </form>
+            </li>
+            <li class="canvas-links-item">
+              <a href="index.html" class="canvas-links-link">Home</a>
+            </li>
+            <li class="canvas-links-item">
+              <a href="hoodie/1.html" class="canvas-links-link">Hoodie</a>
+            </li>
+            <li class="canvas-links-item">
+              <a href="premium-tshirts/1.html" class="canvas-links-link"
+                >Premium T-Shirts</a
+              >
+            </li>
+            <li class="canvas-links-item">
+              <a href="budget-tshirts/1.html" class="canvas-links-link"
+                >Budget T-Shirts</a
+              >
+            </li>
+            <!-- <li class="canvas-links-item">
+              <a href="#" class="canvas-links-link">Punjabi</a>
+            </li> -->
+            <li class="canvas-links-item">
+              <a href="contact.html" class="canvas-links-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <div class="form-product-list">
+        <div id="checkout-page">
+          <h1>Bag Overview</h1>
+          <div id="product-list"></div>
+          <div class="price-container">
+            <div>
+              <p>Total:</p>
+              <p>Shipping:</p>
+              <p>Payable:</p>
+            </div>
+            <div>
+              <p>৳<span id="total-price"></span></p>
+              <p>৳<span id="shipping-price-i">70</span></p>
+              <p>৳<span id="payable">1500</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-tot">
+          <h1 class="checkout-h1">Checkout Information</h1>
+          <div class="form-area">
+            <form action="" method="post">
+              <div class="cantact-info">
+                <h2 class="checkout-h2">Contact Information</h2>
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Full Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Phone Number"
+                  required
+                  pattern="[0-9]{11}"
+                  title="Please enter a valid 11-digit phone number (digits only)."
+                />
+              </div>
+
+              <div class="shipping-info">
+                <h2 class="checkout-h2">Shipping Information</h2>
+
+                <input
+                  type="text"
+                  name="address"
+                  id="address"
+                  placeholder="Detailed Address"
+                  required
+                />
+                <select
+                  autocomplete="off"
+                  class="form-control select-custom disctrict_select"
+                  name="district"
+                  id="district"
+                >
+                  <option value="">Select City</option>
+                  <option value="Dhaka">Dhaka</option>
+                  <option value="Savar">Savar</option>
+                  <option value="Nabinagar">Nabinagar</option>
+                  <option value="Ashulia">Ashulia</option>
+                  <option value="Keraniganj">Keraniganj</option>
+                  <option value="Tongi">Tongi</option>
+                  <option value="Bagerhat">Bagerhat</option>
+                  <option value="Bandarban">Bandarban</option>
+                  <option value="Barguna">Barguna</option>
+                  <option value="Barisal">Barisal</option>
+                  <option value="Bhola">Bhola</option>
+                  <option value="Bogra">Bogra</option>
+                  <option value="Brahmanbaria">Brahmanbaria</option>
+                  <option value="Chandpur">Chandpur</option>
+                  <option value="Chapainawabganj">Chapainawabganj</option>
+                  <option value="Chittagong">Chittagong</option>
+                  <option value="Chuadanga">Chuadanga</option>
+                  <option value="Comilla">Comilla</option>
+                  <option value="Coxs Bazar">Coxs Bazar</option>
+                  <option value="Dinajpur">Dinajpur</option>
+                  <option value="Faridpur">Faridpur</option>
+                  <option value="Feni">Feni</option>
+                  <option value="Gaibandha">Gaibandha</option>
+                  <option value="Gazipur">Gazipur</option>
+                  <option value="Gopalganj">Gopalganj</option>
+                  <option value="Habiganj">Habiganj</option>
+                  <option value="Jamalpur">Jamalpur</option>
+                  <option value="Jessore">Jessore</option>
+                  <option value="Jhalokathi">Jhalokathi</option>
+                  <option value="Jhenaidah">Jhenaidah</option>
+                  <option value="Joypurhat">Joypurhat</option>
+                  <option value="Khagrachari">Khagrachari</option>
+                  <option value="Khulna">Khulna</option>
+                  <option value="Kishoreganj">Kishoreganj</option>
+                  <option value="Kurigram">Kurigram</option>
+                  <option value="Kushtia">Kushtia</option>
+                  <option value="Lakshmipur">Lakshmipur</option>
+                  <option value="Lalmonirhat">Lalmonirhat</option>
+                  <option value="Madaripur">Madaripur</option>
+                  <option value="Magura">Magura</option>
+                  <option value="Manikganj">Manikganj</option>
+                  <option value="Meherpur">Meherpur</option>
+                  <option value="Moulvibazar">Moulvibazar</option>
+                  <option value="Munshiganj">Munshiganj</option>
+                  <option value="Mymensingh">Mymensingh</option>
+                  <option value="Naogaon">Naogaon</option>
+                  <option value="Narail">Narail</option>
+                  <option value="Narayanganj">Narayanganj</option>
+                  <option value="Narsingdi">Narsingdi</option>
+                  <option value="Natore">Natore</option>
+                  <option value="Netrokona">Netrokona</option>
+                  <option value="Nilphamari">Nilphamari</option>
+                  <option value="Noakhali">Noakhali</option>
+                  <option value="Pabna">Pabna</option>
+                  <option value="Panchagarh">Panchagarh</option>
+                  <option value="Patuakhali">Patuakhali</option>
+                  <option value="Pirojpur">Pirojpur</option>
+                  <option value="Rajbari">Rajbari</option>
+                  <option value="Rajshahi">Rajshahi</option>
+                  <option value="Rangamati">Rangamati</option>
+                  <option value="Rangpur">Rangpur</option>
+                  <option value="Satkhria">Satkhria</option>
+                  <option value="Shariatpur">Shariatpur</option>
+                  <option value="Sherpur">Sherpur</option>
+                  <option value="Sirajganj">Sirajganj</option>
+                  <option value="Sunamganj">Sunamganj</option>
+                  <option value="Sylhet">Sylhet</option>
+                  <option value="Tangail">Tangail</option>
+                  <option value="Thakurgaon">Thakurgaon</option>
+                </select>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Altenative Phone Number"
+                />
+              </div>
+
+              <div class="payment-breakdown">
+                <div class="break-header">
+                  <p class="b-text">Your total payable amount is</p>
+                  <p class="b-total">৳<span>1200</span></p>
+                  <h1 class="b-head">Breakdown</h1>
+                </div>
+
+                <div class="breakdown">
+                  <div class="b-h">
+                    <p >Purpose</p>
+                    <p >Amount</p>
+                  </div>
+
+                  <div class="purpose">
+                    <p class="b-cause">Total</p>
+                    <p class="b-purpose-total">৳ <span>0</span></p>
+                  </div>
+
+                  <div class="b-ship">
+                    <p class="b-cause">Shipping</p>
+                    <p class="b-ship-total">৳ <span>0</span></p>
+                  </div>
+                </div>
+
+                <div class="b-foot">
+                  You will get the delivery  
+                &nbsp;<span>within 5-7 Days</span>&nbsp;  after
+                  confirmation.
+                </div>
+              </div>
+
+                <h2 class="checkout-h2">Payment Options</h2>
+
+              <div class="payment-container">
+                
+                <div class="form-check pay-radio">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="cod"
+                    name="pay-opt"
+                    value="cod"
+                    checked
+                  />
+                  <label class="form-check-label" for="cod"
+                    ><img src="img/cod-pay.png" alt="Cash On Delivery"
+                  /></label>
+                </div>
+                <div class="form-check pay-radio">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="bkash"
+                    name="pay-opt"
+                    value="bkash"
+                  />
+                  <label class="form-check-label" for="bkash"
+                    ><img src="img/bkash-logo.jpg" alt="Bkash"
+                  /></label>
+                </div>
+              </div>
+
+              <div class="form-foot">
+                <div class="form-check form-foot-t">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckChecked"
+                    checked
+                  />
+                  <label class="form-check-label form-foot-text" for="flexCheckChecked">
+                    I agree to
+                    <a href="shipping-returns.html">Refund Policy</a> of
+                    BlockeShop.
+                  </label>
+                </div>
+
+                <button type="submit" name="confirm" class=" confirm-btn btn btn-primary">
+                  Confirm Order
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-section">
+        <div class="footer-container">
+          <div class="socials-Home">
+            <div class="socials-logo">
+              <img src="img/logo-black.jpg" alt="Blocke Shop Logo" />
+            </div>
+            <div class="social-container">
+              <a href="#" class="social-link facebook">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#" class="social-link instagram">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+              <a href="#" class="social-link linkedin">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </div>
+            <p class="copyright-text">
+              Copyright © 2023 BlockeShop. All Right Reserved
+            </p>
+          </div>
+
+          <div class="general-links">
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="index.html" class="footer-link">Home</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="hoodie/1.html" class="footer-link">Hoodie</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="premium-tshirts/1.html" class="footer-link"
+                  >Premium T-Shirts</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="budget-tshirts/1.html" class="footer-link"
+                  >Budget T-Shirts</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="contact.html" class="footer-link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="infos">
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="about-us.html" class="footer-link">About Us</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="our-story.html" class="footer-link">Our Story</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="size_guide.html" class="footer-link">Size Guide</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="shipping-returns.html" class="footer-link"
+                  >Shipping & Returns</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="faq.html" class="footer-link">FAQs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Ion Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom Js -->
+
+    <script src="../JS/index.js"></script>
+    <script src="../JS/product-page.js"></script>
+    <script src="../JS/checkout.js"></script>
+  </body>
+</html>
