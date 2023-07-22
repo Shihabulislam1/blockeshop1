@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blocke Shop</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!-- CSS file Link -->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/shipping.css" />
+  </head>
+  <body>
+    <header>
+      <div class="main-header sticky">
+        <button
+          style="border: none; background-color: #fff"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <ion-icon
+            name="menu-outline"
+            class="margin-left header-icon"
+          ></ion-icon></button
+        ><a href="index.html">
+          <img class="header-logo" src="img/logo.jpg" alt="BlockeShop Logo"
+        /></a>
+
+        <div class="search-bag-container margin-right">
+          <ion-icon
+            name="search-outline"
+            id="search-icon"
+            class="position-relative header-icon"
+          ></ion-icon>
+          <div>
+            <ion-icon
+              name="bag-outline"
+              class="header-icon"
+              id="toggle-offcanvas"
+            ></ion-icon>
+            <span
+              class="position-absolute bottom-10 start-200 translate-middle badge rounded-pill bg-danger cart-number-badge"
+            >
+              0
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Modal -->
+
+      <div class="modal-search2" id="search2-modal">
+        <div class="modal-content-search2">
+          <div class="modal-header-search2">
+            <div class="modal-body-search2">
+              <input
+                type="text"
+                class="search2"
+                placeholder="Enter your search term"
+              />
+              <div>
+                <button class="search2-button">Search</button>
+              </div>
+              <div>
+                <ion-icon
+                  name="close-outline"
+                  class="close-search2"
+                  aria-hidden="true"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nav Bar  -->
+      <nav class="Navbar">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="hoodie/1.html" class="nav-link">Hoodie</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="premium-tshirts/1.html" class="nav-link"
+              >Premium T-Shirts</a
+            >
+          </li>
+          <li class="nav-list-item">
+            <a href="budget-tshirts/1.html" class="nav-link">Budget T-Shirts</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Off Canvas Navbar -->
+      <div
+        class="offcanvas offcanvas-start"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+        tabindex="-1"
+        id="offcanvasScrolling"
+        aria-labelledby="offcanvasScrollingLabel"
+      >
+        <div class="offcanvas-header">
+          <div></div>
+          <ion-icon
+            type="button"
+            class="text-reset btn-close-custom"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+            name="close-sharp"
+          ></ion-icon>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="canvas-links">
+            <!-- Create a search Box  -->
+            <li class="canvas-links-item">
+              <form class="search-box">
+                <input
+                  type="text"
+                  class="search-box-input"
+                  placeholder="Search"
+                />
+                <button class="search-box-btn" type="submit">
+                  <ion-icon
+                    name="search-outline"
+                    class="search-box-icon"
+                  ></ion-icon>
+                </button>
+              </form>
+            </li>
+            <li class="canvas-links-item">
+              <a href="index.html" class="canvas-links-link">Home</a>
+            </li>
+            <li class="canvas-links-item">
+              <a href="hoodie/1.html" class="canvas-links-link">Hoodie</a>
+            </li>
+            <li class="canvas-links-item">
+              <a href="premium-tshirts/1.html" class="canvas-links-link"
+                >Premium T-Shirts</a
+              >
+            </li>
+            <li class="canvas-links-item">
+              <a href="budget-tshirts/1.html" class="canvas-links-link"
+                >Budget T-Shirts</a
+              >
+            </li>
+            <!-- <li class="canvas-links-item">
+            <a href="#" class="canvas-links-link">Punjabi</a>
+          </li> -->
+            <li class="canvas-links-item">
+              <a href="contact.html" class="canvas-links-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="policy-container">
+        <h2 class="ship">Return & Replacement Policy</h2>
+        <p class="ship-p">
+          It's a rare case for BlockeShop where customers didn't get their
+          products unharmed. But sometimes we may fail to fulfill your
+          expectations, sometimes situations aren't by our side. But there is
+          now a bond of trust between customers and BlockeShop, So, for further
+          ensuring and encouraging this bond of trust BlockeShop.com brings you
+          the option to return the products you got (If the product is damaged
+          or designed mistakenly.). In that case, BlockeShop will give you fresh
+          products in return.
+        </p>
+        <p class="ship-p">
+          If for any reason you are unsatisfied with your order, you may return
+          it as long as your item meets the following criteria:
+        </p>
+        <ul class="ship-ul">
+          <li>It is within 07 Days from the delivery date.</li>
+          <li>
+            All items to be returned or exchanged must be unused and in their
+            original condition with all original tags and packaging intact and
+            should not be broken or tampered with.
+          </li>
+          <li>
+            If the item came with a free promotional item, the free item must
+            also be returned.
+          </li>
+          <li>
+            Refund/ replacement for products are subject to inspection and
+            checking by the BlockeShop team.
+          </li>
+          <li>
+            Replacement is subject to availability of stock with the Supplier.
+            If the product is out of stock, you will receive a full refund, no
+            questions asked.
+          </li>
+          <li>
+            Please note that the Cash on Delivery convenience charge and the
+            shipping charge would not be included in the refund value of your
+            order as these are non-refundable charges.
+          </li>
+        </ul>
+
+        <h2 class="ship">Reasons for Returns & Replacement</h2>
+        <ul class="ship-ul">
+          <li>Product is damaged, defective, or not as described.</li>
+          <li>
+            Size Mismatch for clothing. (Please be noted that, this policy will
+            only be activated if we send you the clothings which mismatch the
+            size mentioned in the invoice. If invoice and delivered item's size
+            matches, we will not reconsider refund at any cost.)
+          </li>
+          <li>Color Mismatch for clothing.</li>
+          <li>
+            Wrongly Printed clothing. (Front/Back design mismatch, wrong design,
+            wrong placement of design)
+          </li>
+          <li>Wrong product sent.</li>
+        </ul>
+
+        <h2 class="ship">Refund Policy</h2>
+        <ul class="ship-ul">
+          <li>
+            The refund will be processed after we have completed evaluating your
+            return.
+          </li>
+          <li>
+            Replacement is subject to availability of stock with the Supplier.
+            If the product is out of stock, you will receive a full refund, no
+            questions asked.
+          </li>
+          <li>
+            Please note that the Cash on Delivery convenience charge and the
+            shipping charge would not be included in the refund value of your
+            order as these are non-refundable charges.
+          </li>
+          <li>
+            If you have selected Cash on Delivery (COD), there is no amount to
+            refund because you haven't paid for your order.
+          </li>
+          <li>
+            For payments made using Mobile Banking you will receive a refund in
+            your respective account.
+          </li>
+          <li>
+            If an online payment is made once more due to a technical error, the
+            payment refund will be made.
+          </li>
+          <li>
+            You will receive a refund anytime between 7-10 working days. If you
+            don't receive a refund within this time, please write to us at
+            <a href="mailto:blockeshop@gmail.com">blockeshop@gmail.com</a> and
+            we shall investigate.
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-section">
+        <div class="footer-container">
+          <div class="socials-Home">
+            <div class="socials-logo">
+              <img src="img/logo-black.jpg" alt="Blocke Shop Logo" />
+            </div>
+            <div class="social-container">
+              <a href="#" class="social-link facebook">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#" class="social-link instagram">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+              <a href="#" class="social-link linkedin">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </div>
+            <p class="copyright-text">
+              Copyright © 2023 BlockeShop. All Right Reserved
+            </p>
+          </div>
+
+          <div class="general-links">
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="index.html" class="footer-link">Home</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="hoodie/1.html" class="footer-link">Hoodie</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="premium-tshirts/1.html" class="footer-link"
+                  >Premium T-Shirts</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="budget-tshirts/1.html" class="footer-link"
+                  >Budget T-Shirts</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="contact.html" class="footer-link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="infos">
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="about-us.html" class="footer-link">About Us</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="our-story.html" class="footer-link">Our Story</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="size_guide.html" class="footer-link">Size Guide</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="shipping-returns.html" class="footer-link"
+                  >Shipping & Returns</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="faq.html" class="footer-link">FAQs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-overlay"></div>
+
+    <!-- Ion Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Custom Js -->
+    <script src="JS/index.js"></script>
+    <script src="JS/product-page.js"></script>
+  </body>
+</html>
