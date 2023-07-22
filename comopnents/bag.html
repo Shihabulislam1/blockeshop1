@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Add Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/general.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button
+      class="btn btn-primary"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight"
+      aria-controls="offcanvasRight"
+    >
+      Toggle right offcanvas
+    </button> -->
+    <button
+      class="btn btn-primary"
+      type="button"
+      id="toggle-offcanvas"
+    >
+      Toggle right offcanvas
+    </button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" >
+      <div class="offcanvas-header bag-header">
+        <h5 class="offcanvas-title bag-title-cart" id="offcanvasRightLabel">
+          CART
+        </h5>
+        <ion-icon
+          name="close-sharp"
+          class="btn-bag-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close" id="close-offcanvas"
+        ></ion-icon>
+      </div>
+      <div class="offcanvas-body bag-canvas-body-container">
+        <div class="bag-canvas-body">
+          <div class="bag-product-container">
+            <div class="bag-product-header">
+              <div class="bag-product-title">
+                <p>The Stress Strain Curve T-Shirt - Black</p>
+              </div>
+              <div class="bag-product-img">
+                <img
+                  src="../img/T_shirts/Tshirt1/Tshirt_addv_Displacement.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <hr class="bag-hr" />
+            <div class="bag-product-main">
+              <div class="bag-product-price">
+                <p class="bag-main-text">Price</p>
+                <p class="bag-price">৳ <span>685</span></p>
+              </div>
+              <hr class="bag-hr" />
+              <div class="bag-product-size">
+                <p class="bag-main-text">Size</p>
+                <div class="dropdown-size dropdown-up">
+                  <input
+                    class="text-box"
+                    type="text"
+                    placeholder="Select one"
+                    readonly
+                  />
+                  <div class="options">
+                    <div onclick="showSize('M')" data-value="M">M</div>
+                    <div onclick="showSize('L')" data-value="L">L</div>
+                    <div onclick="showSize('XL')" data-value="XL">XL</div>
+                    <div onclick="showSize('XXL')" data-value="XXL">XXL</div>
+                  </div>
+                </div>
+              </div>
+              <hr class="bag-hr" />
+              <div class="bag-product-quantity">
+                <p class="bag-main-text">Quantity</p>
+                <div class="quantity-selector">
+                  <input
+                    class="num-box"
+                    type="number"
+                    placeholder="Select one"
+                    readonly
+                  />
+                  <div class="options">
+                    <div onclick="showQuantity('1')" data-value="1">1</div>
+                    <div onclick="showQuantity('2')" data-value="2">2</div>
+                    <div onclick="showQuantity('3')" data-value="3">3</div>
+                    <div onclick="showQuantity('4')" data-value="4">4</div>
+                    <div onclick="showQuantity('5')" data-value="5">5</div>
+                    <div onclick="showQuantity('6')" data-value="6">6</div>
+                    <div onclick="showQuantity('7')" data-value="7">7</div>
+                    <div onclick="showQuantity('8')" data-value="8">8</div>
+                    <div onclick="showQuantity('9')" data-value="9">9</div>
+                    <div onclick="showQuantity('10')" data-value="10">10</div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="bag-hr" />
+
+              <div class="bag-product-subtotal">
+                <p class="bag-main-text">Subtotal</p>
+                <p class="bag-subtotal">
+                  ৳ <span class="bag-subtotal-price">685</span>
+                </p>
+              </div>
+
+              <hr class="bag-hr" />
+
+              <div class="bag-product-remove">
+                <p class="bag-remove-text">Remove</p>
+              </div>
+            </div>
+          </div>
+          <div class="bag-product-footer">
+            <div class="bag-total">
+              <p>Cart Total:</p>
+              <p>৳ <span class="bag-total-price">685</span></p>
+            </div>
+            <div class="bag-checkout">
+              <a href="#">Checkout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Ion Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Add Bootswtrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <!-- <script src="../JS/index.js"></script> -->
+    <script src="../JS/cart.js"></script>
+  </body>
+</html>
