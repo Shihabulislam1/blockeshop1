@@ -145,6 +145,13 @@ if (cancelModalButton) {
 }
 
 //// Check if any items are already stored in local storage
+
+//aboslute path
+function removeAllRelativePath(path) {
+  // Use regular expression to remove "../../" from the beginning of the string
+  return path.replace(/^(\.\.\/)+/, '');
+}
+
 let bagItems = [];
 if (localStorage.getItem("bagItems")) {
   bagItems = JSON.parse(localStorage.getItem("bagItems"));
@@ -305,19 +312,27 @@ function addToBag(product) {
   updateBag();
 }
 
+function resolveRelativeUrl(relativeUrl) {
+  const img = new Image();
+  img.src = relativeUrl;
+  return img.src;
+}
+
+
 function updateBag() {
   const bagContainer = document.querySelector(".bag-items");
   const bagItems = JSON.parse(localStorage.getItem("bagItems")) || [];
-
   bagContainer.innerHTML = "";
 
   bagItems.forEach((item, index) => {
+    // Convert relative image path to absolute path using the resolveRelativeUrl function
+    const absoluteImgSrc = resolveRelativeUrl(item.imgSrc);
     const bagItemHTML = `
     <div class="bag-item">
         
         <div class="bag-item-content-wrapper">
             <div class="bag-item-img">
-              <img src="${item.imgSrc}" alt="Product Image">
+              <img src="${absoluteImgSrc}" alt="Product Image">
             </div>
             <div class="bag-item-details">
               <h3 class="bag-item-title">${item.title}</h3>

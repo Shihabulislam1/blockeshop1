@@ -41,9 +41,3 @@
 
 
 
-
-/* ----------------------------------------- */
-
-// Check if any items are already stored in local storage
-
-
