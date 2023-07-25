@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | BlockeShop</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS file Link -->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+  </head>
+  <body>
+    <header>
+      <div class="main-header sticky">
+        <button
+          style="border: none; background-color: #fff"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <ion-icon
+            name="menu-outline"
+            class="margin-left header-icon"
+          ></ion-icon></button
+        ><a href="index.html">
+          <img class="header-logo" src="img/logo.jpg" alt="BlockeShop Logo"
+        /></a>
+
+        <div class="search-bag-container margin-right">
+          <ion-icon
+            name="search-outline"
+            id="search-icon"
+            class="position-relative header-icon"
+          ></ion-icon>
+          <div>
+            <ion-icon
+              name="bag-outline"
+              class="header-icon"
+              id="toggle-offcanvas"
+            ></ion-icon>
+            <span
+              class="position-absolute bottom-10 start-200 translate-middle badge rounded-pill bg-danger cart-number-badge"
+            >
+              0
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Modal -->
+
+      <div class="modal-search2" id="search2-modal">
+        <div class="modal-content-search2">
+          <div class="modal-header-search2">
+            <div class="modal-body-search2">
+              <input
+                type="text"
+                class="search2"
+                placeholder="Enter your search term"
+              />
+              <div>
+                <button class="search2-button">Search</button>
+              </div>
+              <div>
+                <ion-icon
+                  name="close-outline"
+                  class="close-search2"
+                  aria-hidden="true"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nav Bar  -->
+      <nav class="Navbar">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="hoodie/1.html" class="nav-link">Hoodie</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="premium-tshirts/1.html" class="nav-link"
+              >Premium T-Shirts</a
+            >
+          </li>
+          <li class="nav-list-item">
+            <a href="budget-tshirts/1.html" class="nav-link">Budget T-Shirts</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Off Canvas Navbar -->
+      <div
+        class="offcanvas offcanvas-start"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+        tabindex="-1"
+        id="offcanvasScrolling"
+        aria-labelledby="offcanvasScrollingLabel"
+      >
+        <div class="offcanvas-header">
+          <div></div>
+          <ion-icon
+            type="button"
+            class="text-reset btn-close-custom"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+            name="close-sharp"
+          ></ion-icon>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="canvas-links">
+            <!-- Create a search Box  -->
+            <li class="canvas-links-item">
+              <form class="search-box">
+                <input
+                  type="text"
+                  class="search-box-input"
+                  placeholder="Search"
+                />
+                <button class="search-box-btn" type="submit">
+                  <ion-icon
+                    name="search-outline"
+                    class="search-box-icon"
+                  ></ion-icon>
+                </button>
+              </form>
+            </li>
+            <li class="canvas-links-item">
+              <a href="index.html" class="canvas-links-link">Home</a>
+            </li>
+            <li class="canvas-links-item">
+              <a href="hoodie/1.html" class="canvas-links-link">Hoodie</a>
+            </li>
+            <li class="canvas-links-item">
+              <a href="premium-tshirts/1.html" class="canvas-links-link"
+                >Premium T-Shirts</a
+              >
+            </li>
+            <li class="canvas-links-item">
+              <a href="budget-tshirts/1.html" class="canvas-links-link"
+                >Budget T-Shirts</a
+              >
+            </li>
+            <!-- <li class="canvas-links-item">
+              <a href="#" class="canvas-links-link">Punjabi</a>
+            </li> -->
+            <li class="canvas-links-item">
+              <a href="contact.html" class="canvas-links-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        
+
+
+
+       <!-- CART Modal Window -->
+       <div class="cart-product-modal-container">
+        <div class="cart-product-header">
+          <p class="cart-product-header-text">Choose Size</p>
+          <ion-icon
+            class="cart-product-modal-icon"
+            name="close-outline"
+          ></ion-icon>
+        </div>
+        <div class="cart-product-modal">
+          <div class="cart-product-img">
+            <img
+              src="../img/T_shirts/Tshirt1/Tshirt_addv_Displacement.jpg"
+              alt=""
+            />
+          </div>
+          <div class="cart-product-side">
+            <div class="cart-product-title">
+              <p>The Stress Strain Curve T-Shirt - Black</p> 
+              <div class="cart-product-price">
+                ৳<span>685</span>
+              </div>
+            </div>
+           
+            <div class="cart-product-size">
+              <div class="order-option">
+                <!-- Selecting Tshirt Size -->
+                <p class="size-select-text">Choose Size:</p>
+                <ul class="size-selectors-container list-inline">
+                  <li class="size-selector list-inline-item" data-size="S">
+                    S
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="M">
+                    M
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="L">
+                    L
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="XL">
+                    XL
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="XXL">
+                    XXL
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="XXXL">
+                    XXXL
+                  </li>
+                </ul>
+                <span
+                  class="no-size-selected"
+                  style="color: rgb(230, 28, 28);font-size: 1.2rem; display: none"
+                  >Please select a size &nbsp;<i
+                    class="fa fa-arrow-up"
+                    aria-hidden="true"
+                  ></i
+                ></span>
+              </div>
+            </div>
+            <div class="cart-product-quantity">
+              <div class="cart-product-quantity-text size-select-text">
+                Choose Quantity:
+              </div>
+              <div class="quantity-selection">
+                <div class="number-input">
+                  <button class="minus-btn">-</button>
+                  <input type="number" class="input-field" value="1" min="1" />
+                  <button class="plus-btn">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="cart-product-hr" />
+        <div class="cart-product-footer">
+          <button class="btn btn-danger cancel-modal-button">Cancel</button>
+
+          <div class="addCArt">
+            <button class="add-product-bag">
+              <ion-icon class="product-card-icon" name="bag-outline"></ion-icon
+              >Add to Bag
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add to BAg Section -->
+      <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" >
+        <div class="offcanvas-header bag-header">
+          <h5 class="offcanvas-title bag-title-cart" id="offcanvasRightLabel">
+            CART
+          </h5>
+          <ion-icon
+            name="close-sharp"
+            class="btn-bag-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close" id="close-offcanvas"
+          ></ion-icon>
+        </div>
+        <div class="offcanvas-body bag-canvas-body-container">
+          <div class="bag-canvas-body">
+            <div class="bag-render-wrapper">
+              <div class="bag-items"></div>
+            </div>
+            <div class="bag-product-footer">
+              <div class="bag-total">
+                <p>Cart Total:</p>
+                <p>৳ <span class="bag-total-price">0</span></p>
+              </div>
+              <div class="bag-checkout">
+                <a class="bag-checkout-link" href="../checkout.html">Checkout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-section">
+        <div class="footer-container">
+          <div class="socials-Home">
+            <div class="socials-logo">
+              <img src="img/logo-black.jpg" alt="Blocke Shop Logo" />
+            </div>
+            <div class="social-container">
+              <a href="#" class="social-link facebook">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#" class="social-link instagram">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+              <a href="#" class="social-link linkedin">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </div>
+            <p class="copyright-text">
+              Copyright © 2023 BlockeShop. All Right Reserved
+            </p>
+          </div>
+
+          <div class="general-links">
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="index.html" class="footer-link">Home</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="hoodie/1.html" class="footer-link">Hoodie</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="premium-tshirts/1.html" class="footer-link"
+                  >Premium T-Shirts</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="budget-tshirts/1.html" class="footer-link"
+                  >Budget T-Shirts</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="contact.html" class="footer-link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="infos">
+            <ul class="footer-list">
+              <li class="footer-list-item">
+                <a href="about-us.html" class="footer-link">About Us</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="our-story.html" class="footer-link">Our Story</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="size_guide.html" class="footer-link">Size Guide</a>
+              </li>
+              <li class="footer-list-item">
+                <a href="shipping-returns.html" class="footer-link"
+                  >Shipping & Returns</a
+                >
+              </li>
+              <li class="footer-list-item">
+                <a href="faq.html" class="footer-link">FAQs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Ion Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom Js -->
+
+    <script src="JS/index.js"></script>
+    <script src="JS/product-page.js"></script>
+    <script src="JS/checkout.js"></script>
+  </body>
+</html>

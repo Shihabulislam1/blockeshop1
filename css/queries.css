@@ -1,0 +1,13 @@
+/* For Mobille */
+@media screen and  (max-width:576px){
+    html{
+        font-size: 31.2%;
+    }
+    header{
+        grid-template-rows: 8rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+       .Navbar{
+        display: none;
+       } 
+}
