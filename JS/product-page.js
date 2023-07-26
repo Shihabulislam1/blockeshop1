@@ -1,3 +1,5 @@
+'use strict'
+
 // Header Search Option Implementation
 
 const searchIcon = document.getElementById("search-icon");

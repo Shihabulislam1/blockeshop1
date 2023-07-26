@@ -1,3 +1,5 @@
+'use strict'
+
 // Function to retrieve cart items from localStorage
 function getCartItems() {
   const cartItemsString = localStorage.getItem("bagItems");

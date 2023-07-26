@@ -70,7 +70,9 @@ nav ul {
   align-items: center;
   margin: 0 auto;
 }
-
+.nav-link{
+  color: #c63837 !important;
+}
 .nav-link:link,
 .nav-link:active {
   text-decoration: none;
@@ -292,8 +294,8 @@ nav ul {
 .subheading-hero {
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
   color: #333;
   margin: 0;
 }
@@ -315,14 +317,14 @@ nav ul {
   
   transition: all 0.3s ease-in-out; */
   display: flex;
-  width: 200px;
-  height: 66px;
+  width: 20rem;
+  height: 6.6rem;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  border-radius: 15px; 
+  border-radius: 1.5rem; 
   text-align: center;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-family: Rubik;
   font-weight: 500;
   cursor: pointer;

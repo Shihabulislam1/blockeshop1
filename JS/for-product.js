@@ -1,4 +1,4 @@
-
+'use strict'
 //// Check if any items are already stored in local storage
 // let bagItems = [];
 // if (localStorage.getItem("bagItems")) {

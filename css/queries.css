@@ -1,13 +1,44 @@
 /* For Mobille */
-@media screen and  (max-width:576px){
-    html{
-        font-size: 31.2%;
-    }
-    header{
-        grid-template-rows: 8rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-       .Navbar{
-        display: none;
-       } 
+@media screen and (max-width: 544px) {
+  html {
+    font-size: 43.5%;
+  }
+  header {
+    grid-template-rows: 8rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+  #search-icon {
+    display: none;
+  }
+  .margin-left {
+    margin-left: 2.4rem;
+  }
+  .margin-right {
+    margin-right: 3.6rem;
+  }
+  .search-bag-container {
+    width: 3.6rem;
+  }
+  .Navbar {
+    display: none;
+  }
+  .hero-text-container {
+    top:10%;
+    left :3%;
+    grid-template-columns: 2fr 1fr;
+  }
+  
+  .hero-text {
+    
+  }
+  .heading-hero {
+    font-size: 4.2rem;
+  }
+  .subheading-hero{
+    padding: 0 22.5rem 0 0;
+  }
+  .btn-hero {
+  }
+  .btn-getStarted {
+  }
 }

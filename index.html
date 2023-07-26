@@ -169,7 +169,15 @@
 
   <main>
     <section class="hero">
-      <img src="img/Landingpage2.jpg" class="hero-img">
+      <picture>
+  <!-- Source for screens less than or equal to 576px -->
+  <source media="(max-width: 544px)" srcset="img/Promo_Phone2.jpg" >
+  <!-- Source for screens less than or equal to 768px -->
+  <source media="(max-width: 768px)" srcset="img/Promo_Phone2.jpg" >
+  <!-- Default source for screens larger than 768px -->
+  <img src="img/Landingpage2.jpg" alt="Image" class="hero-img">
+</picture>
+
       <div class="hero-text-container">
         <div class="hero-text">
           <h1 class="heading-hero">
@@ -189,7 +197,7 @@
             </span>
           </div> -->
         </div>
-        <div>
+        <div >
 
         </div>
       </div>

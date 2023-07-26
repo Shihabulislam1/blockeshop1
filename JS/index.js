@@ -1,3 +1,5 @@
+'use strict'
+
 // For sticky navbar
 const mainHeader = document.querySelector('.main-header');
 
