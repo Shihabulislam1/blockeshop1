@@ -169,8 +169,8 @@ body {
 }
 .btn-shop-all {
   display: flex;
-  width: 225px;
-  height: 75px;
+  width: 22.5rem;
+  height: 7.5rem;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -208,7 +208,7 @@ body {
   width: 70rem;
   display: flex;
   flex-direction: column;
-  border-radius: 7px;
+  border-radius: 12px;
   background-color: #fff;
   z-index: 10000;
   position: fixed;

@@ -336,7 +336,7 @@ nav ul {
   transition: all 0.3s ease-in-out;
 }
 .btn-getStarted:hover{
-  background: #f9ebeb;
+  background: #fff;
   color: #111;
   border: 1px solid #111;
 }

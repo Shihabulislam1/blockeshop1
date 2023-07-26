@@ -38,6 +38,24 @@ window.addEventListener('scroll', handleScroll);
         prevEl: '.swiper-button-prev',
       
       },
+      breakpoints: {
+        350:{
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        // When window width is <= 767px
+        767: {
+          slidesPerView: 1,
+        },
+        // When window width is <= 991px
+        991: {
+          slidesPerView: 2,
+        },
+        // When window width is <= 1199px
+        1400: {
+          slidesPerView: 3,
+        },
+      },
     });
   
 
