@@ -9,7 +9,6 @@ const closeButton2 = searchModal.querySelector(".close-search2");
 let timerId;
 
 searchIcon.addEventListener("click", openSearchModal);
-searchIcon.addEventListener("mouseenter", openSearchModal);
 
 function openSearchModal() {
   searchModal.style.display = "block";

@@ -62,13 +62,14 @@ header {
   display: flex; /* Add this line */
   align-items: center; /* Add this line */
 }
-nav ul {
+.nav-list {
   list-style: none;
   display: flex;
   gap: 9.6rem;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding: 0;
 }
 .nav-link{
   color: #c63837 !important;
@@ -296,7 +297,7 @@ nav ul {
   font-weight: 400;
   font-size: 2rem;
   line-height: 2.4rem;
-  color: #333;
+  color: #555;
   margin: 0;
 }
 .hero-title {

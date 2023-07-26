@@ -16,6 +16,114 @@
   .margin-right {
     margin-right: 3.6rem;
   }
+  .nav-link:link,
+  .nav-link:active {
+    font-size: 3.2rem;
+  }
+  .search-bag-container {
+    width: 3.6rem;
+  }
+  .Navbar {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+  }
+
+  .canvas-links-item .canvas-links-link:link,
+  .canvas-links-item .canvas-links-link:active {
+    font-size: 3.2rem;
+  }
+  .hero-text-container {
+    grid-row-start: 1;
+    /* top:10%;
+    left :3%; */
+    position: static;
+    grid-template-columns: 20fr 1fr;
+    padding: 2.4rem 2rem 1.2rem 3rem;
+  }
+
+  .hero-text {
+  }
+  .heading-hero {
+    font-size: 4rem;
+  }
+  .subheading-hero {
+    /* display: none; */
+    padding: 0 10rem 0 0;
+  }
+  .mySwiper {
+    margin: 0 auto;
+  }
+  .title-btn-container {
+    margin: 6.4rem 2.4rem 0 2.4rem;
+  }
+  .title {
+    font-size: 3.2rem;
+  }
+  .btn-shop-all {
+    width: 16rem;
+    height: 5.4rem;
+  }
+  .footer-section {
+    height: 100%;
+    padding: 2.4rem 2.4rem 2.4rem 2.4rem;
+  }
+  .footer-container {
+    gap: 3.6rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 3.2rem;
+  }
+  .copyright-text {
+    margin-top: 0.6rem;
+  }
+  .footer-list {
+    padding: 0;
+  }
+  .footer-list-item a:link,
+  .footer-list-item a:active {
+    font-size: 2rem;
+  }
+
+  /* CArt Modal */
+  .cart-product-modal-container {
+    width: 45rem;
+  }
+  .cart-product-modal {
+    flex-direction: column;
+  }
+  .add-product-bag {
+    height: 4.4rem;
+  }
+}
+
+/* For Small Tablet */
+/* For Mobille */
+@media screen and (min-width: 545px) and (max-width: 769px) {
+  html {
+    font-size: 59.5%;
+  }
+  header {
+    grid-template-rows: 8rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  #search-icon {
+    display: none;
+  }
+  .margin-left {
+    margin-left: 2.4rem;
+  }
+  .margin-right {
+    margin-right: 3.6rem;
+  }
+
+  .canvas-links-item .canvas-links-link:link,
+  .canvas-links-item .canvas-links-link:active {
+    font-size: 2.4rem;
+  }
   .search-bag-container {
     width: 3.6rem;
   }
@@ -45,11 +153,6 @@
     /* display: none; */
     padding: 0 10rem 0 0;
   }
-  .btn-hero {
-  }
-  .btn-getStarted {
-  }
-
   .mySwiper {
     margin: 0 auto;
   }
@@ -57,38 +160,99 @@
     margin: 6.4rem 2.4rem 0 2.4rem;
   }
   .title {
-    font-size: 2.4rem;
+    font-size: 3.2rem;
   }
   .btn-shop-all {
     width: 16rem;
     height: 5.4rem;
   }
-  .footer-section{
+  .footer-section {
     height: 100%;
     padding: 2.4rem 2.4rem 2.4rem 2.4rem;
-    
   }
-  .footer-container{
-    gap:3.6rem;
+  .footer-container {
+    gap: 3.6rem;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    font-size: 3.2rem;
   }
-  .copyright-text{
+  .copyright-text {
     margin-top: 0.6rem;
   }
-  .footer-list{
+  .footer-list {
     padding: 0;
+  }
+  .footer-list-item a:link,
+  .footer-list-item a:active {
+    font-size: 1.8rem;
   }
 
   /* CArt Modal */
-  .cart-product-modal-container{
+  .cart-product-modal-container {
     width: 45rem;
   }
-  .cart-product-modal{
+  .cart-product-modal {
     flex-direction: column;
   }
-.add-product-bag {
-  height: 4.4rem;
+  .add-product-bag {
+    height: 4.4rem;
+  }
 }
+
+/* For Tablets */
+@media screen and (min-width: 769px) and (max-width: 944px) {
+  html {
+    font-size: 50%;
+  }
+  .nav-link:link,
+  .nav-link:active {
+    font-size: 1.8rem;
+  }
+  .nav-list{
+    gap:6.4rem
+  }
+  .hero-text-container {
+    
+    top:15%;
+    left: 2.5%;
+    grid-template-columns: 4fr 1fr;
+    padding: 2.4rem 2rem 1.2rem 0rem;
+  }
+  .heading-hero {
+    font-size: 5.2rem;
+  }
+  .subheading-hero {
+    /* display: none; */
+    padding: 0 20rem 0 0;
+  }
+
+  .product-card{
+    width: 34rem;
+  }
+
+}
+
+
+/* For small Laptops and landscapr tablet */
+
+@media screen and (min-width: 945px) and (max-width: 1200px){
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+  .hero-text-container {
+    
+    top:17%;
+    left: 2.5%;
+    grid-template-columns: 4fr 1fr;
+    padding: 2.4rem 2rem 1.2rem 0rem;
+  }
+  .heading-hero {
+    font-size: 5.2rem;
+  }
+  .subheading-hero {
+    /* display: none; */
+    padding: 0 20rem 0 0;
+  }
 }

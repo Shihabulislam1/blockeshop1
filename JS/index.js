@@ -39,13 +39,18 @@ window.addEventListener('scroll', handleScroll);
       
       },
       breakpoints: {
+        200:{
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
         350:{
           slidesPerView: 1,
           spaceBetween: 15,
         },
         // When window width is <= 767px
-        767: {
-          slidesPerView: 1,
+        769: {
+          slidesPerView: 2,
+          spaceBetween: 5,
         },
         // When window width is <= 991px
         991: {
