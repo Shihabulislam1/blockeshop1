@@ -21,7 +21,7 @@
     justify-content: center;}
 
   .pagination .page-link {
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #280b0b; /* custom color */
   }
 

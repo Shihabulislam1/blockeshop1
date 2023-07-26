@@ -53,12 +53,14 @@ window.addEventListener('scroll', handleScroll);
           spaceBetween: 5,
         },
         // When window width is <= 991px
-        991: {
+        945: {
           slidesPerView: 2,
+          spaceBetween: 10,
         },
         // When window width is <= 1199px
-        1400: {
+        1200: {
           slidesPerView: 3,
+          spaceBetween:20
         },
       },
     });
