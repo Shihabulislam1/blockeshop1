@@ -242,6 +242,17 @@
   .new-arrival-container .product-card {
     width: 40rem;
   }
+   /* For Product Page */
+   .product-details{
+    flex-direction: column;
+  }
+  .product-details-img img{
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
 }
 
 /* For Tablets */
@@ -273,6 +284,9 @@
   .product-card {
     width: 34rem;
   }
+  .footer-container{
+    gap: 8.6rem;
+  }
   /* For Product-group page */
   .new-arrival-container {
     grid-template-columns: 1fr 1fr;
@@ -280,6 +294,19 @@
   .new-arrival-title {
     margin-left: 3.6rem;
   }
+  /* For Product Page */
+  .product-details{
+    gap: 2.4rem;
+    margin: 4.8rem auto;
+  }
+  .product-details-img img{
+    height: 40rem;
+    width: 40rem;
+  }
+  .product-infos{
+    padding-right: 2.4rem;
+  }
+
 }
 
 /* For small Laptops and landscapr tablet */
@@ -301,6 +328,18 @@
   .subheading-hero {
     /* display: none; */
     padding: 0 20rem 0 0;
+  }
+  /* For Product Page */
+  .product-details{
+    gap: 2.4rem;
+    margin: 4.8rem auto;
+  }
+  .product-details-img img{
+    height: 45rem;
+    width: 45rem;
+  }
+  .product-infos{
+    padding-right: 2.4rem;
   }
 }
 
@@ -333,6 +372,23 @@
   }
   .product-card{
     width: 33rem;
+  }
+}
+
+
+
+@media screen and (min-width: 1200px) and (max-width: 1399px){
+  /* For Product Page */
+  .product-details{
+    gap: 2.4rem;
+    margin: 4.8rem auto;
+  }
+  .product-details-img img{
+    height: 50rem;
+    width: 50rem;
+  }
+  .product-infos{
+    padding-right: 2.4rem;
   }
 }
 
