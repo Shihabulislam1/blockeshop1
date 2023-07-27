@@ -129,6 +129,17 @@
     justify-content: center;
     margin: 0 auto;
   }
+
+
+  /* For Checkout PAge */
+  .form-product-list{
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  #checkout-page{
+    padding: 1.2rem;
+  }
 }
 
 /* For Small Tablet */
@@ -253,6 +264,15 @@
     justify-content: center;
     margin: 0 auto;
   }
+    /* For Checkout PAge */
+    .form-product-list{
+      display: flex;
+      flex-direction: column;
+      gap: 4.8rem;
+    }
+    #checkout-page{
+      padding: 2.4rem;
+    }
 }
 
 /* For Tablets */

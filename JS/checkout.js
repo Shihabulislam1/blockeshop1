@@ -165,3 +165,66 @@ document.addEventListener("DOMContentLoaded", function () {
     updateButtonTextAndState();
   });
 });
+
+
+
+
+
+
+
+
+
+// Function to get the data from localStorage
+function getLocalStorageData() {
+  const data = JSON.parse(localStorage.getItem('bagItems'));
+  return data ? data : [];
+}
+
+// Function to send data to the server/API
+function sendDataToServer(formData) {
+  // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint URL
+  const apiEndpoint = 'api endpoint URL';
+
+  // You can use fetch() or other AJAX methods to send data to the server
+  fetch(apiEndpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Handle the server response if needed
+      console.log('Server response:', data);
+    })
+    .catch(error => {
+      // Handle errors if any
+      console.error('Error:', error);
+    });
+}
+
+document.getElementById('checkout-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  // Get form data
+  const formData = new FormData(event.target);
+
+  // Get the data from localStorage
+  const localStorageData = getLocalStorageData();
+
+  // Combine form data with localStorage data
+  const combinedData = {
+    formData: Object.fromEntries(formData),
+    localStorageData
+  };
+
+  // Send the data to the server/API
+  sendDataToServer(combinedData);
+
+  // Clear localStorage after sending data if needed
+  // localStorage.removeItem('bagItems');
+
+  // Optionally, you can redirect to a thank-you page or show a success message
+  window.location.href = 'confirm.html';
+});
