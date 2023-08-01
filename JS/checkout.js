@@ -204,7 +204,7 @@ function sendDataToServer(formData) {
     });
 }
 
-document.getElementById('checkout-form').addEventListener('submit', function (event) {
+document.getElementById('form').addEventListener('submit', function (event) {
   event.preventDefault();
 
   // Get form data

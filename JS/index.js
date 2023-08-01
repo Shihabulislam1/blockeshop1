@@ -66,16 +66,6 @@ window.addEventListener('scroll', handleScroll);
     });
   
 
-
-
-
-
-
-
-
-
-
-
 // CArt Size and Quantity
 function showSize(value) {
   document.querySelector(".text-box").value = value;
@@ -99,26 +89,37 @@ dropdownQuantity.onclick = function () {
 
 // SubTOtal and Cart Total
 
-function showQuantity(value) {
-  document.querySelector(".num-box").value = value;
-  updateSubtotal(value);
-  updateCartTotal();
-}
+// function showQuantity(value) {
+//   document.querySelector(".num-box").value = value;
+//   updateSubtotal(value);
+//   updateCartTotal();
+// }
 
-function updateSubtotal(quantity) {
-  const price = 685; // Get the product price from the HTML or calculate dynamically
-  const subtotal = price * quantity;
-  document.querySelector(".bag-subtotal-price").textContent = subtotal;
-}
+// function updateSubtotal(quantity) {
+//   const price = 685; // Get the product price from the HTML or calculate dynamically
+//   const subtotal = price * quantity;
+//   document.querySelector(".bag-subtotal-price").textContent = subtotal;
+// }
 
-function updateCartTotal() {
-  let subtotalElements = document.querySelectorAll(".bag-subtotal-price");
-  let total = 0;
-  subtotalElements.forEach((element) => {
-    total += parseInt(element.textContent);
-  });
-  document.querySelector(".bag-total-price").textContent = total;
-}
+// function updateCartTotal() {
+//   let subtotalElements = document.querySelectorAll(".bag-subtotal-price");
+//   let total = 0;
+//   subtotalElements.forEach((element) => {
+//     total += parseInt(element.textContent);
+//   });
+//   document.querySelector(".bag-total-price").textContent = total;
+// }
 
 
 
+//Setting uo the Social links of Footer
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Replace the "#" with the actual Facebook profile URL
+  const facebookProfileURL = "https://www.facebook.com/profile.php?id=100095087479918&mibextid=D4KYlr";
+  const facebookLink = document.getElementById("facebook-link");
+
+  // Set the href attribute of the link
+  facebookLink.href = facebookProfileURL;
+});
