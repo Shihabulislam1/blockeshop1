@@ -19,98 +19,33 @@ window.addEventListener("scroll", handleScroll);
 
 //  Render Products From Api
 
-const budgetTshirtsContainer = document.getElementById(
-  "budget-tshirt-wrapper-home"
-);
-const premiumTshirtsContainer = document.getElementById(
-  "premium-tshirt-wrapper-home"
-);
-const winterCollectionContainer = document.getElementById(
-  "winter-collection-wrapper-home"
-);
-
-const renderWinterCollection = function (dataArray) {
-  const productHtml = `
-      <li class="splide__slide">        
-      <div class="product-card" id="${dataArray._id}">
-        <div class="product-card-ul">
-          <div class="product-img">
-            <a href="product-details.html" class="product-link" data-product-id="${dataArray._id}">
-            <img
-                src="${dataArray.imageUrl}"
-                alt="${dataArray.name}"
-            /></a>
-          </div>
-          <div class="product-title">
-             ${dataArray.name}
-          </div>
-          <div class="product-price"><p class="product-price-cut">৳ 350</p>৳ <span>${dataArray.price}</span></div>
-          <div class="product-bag">
-            <ion-icon class="card-icon" name="bag-outline"></ion-icon>ADD TO
-            BAG
-          </div>
-        </div>
-      </div>
-      </li>   
-`;
-  // before Start insert it
-
-  winterCollectionContainer.insertAdjacentHTML("beforeend", productHtml);
-};
-
-const renderPremiumTshirts = function (dataArray) {
-  const productHtml = `
-      <li class="splide__slide">        
-      <div class="product-card" id="${dataArray._id}">
-        <div class="product-card-ul">
-          <div class="product-img">
-            <a href="product-details.html" class="product-link" data-product-id="${dataArray._id}">
-            <img
-                src="${dataArray.imageUrl}"
-                alt="${dataArray.name}"
-            /></a>
-          </div>
-          <div class="product-title">
-             ${dataArray.name}
-          </div>
-          <div class="product-price"><p class="product-price-cut">৳ 350</p>৳ <span>${dataArray.price}</span></div>
-          <div class="product-bag">
-            <ion-icon class="card-icon" name="bag-outline"></ion-icon>ADD TO
-            BAG
-          </div>
-        </div>
-      </div>
-      </li>   
-`;
-  // before Start insert it
-
-  premiumTshirtsContainer.insertAdjacentHTML("beforeend", productHtml);
-};
-
+const winterCollectionContainer= document.getElementById("winter-page-container");
 
 // Function to render budget t-shirts dynamically
-const renderBudgetTshirts = function (dataArray) {
+const   renderWinterCollection= function (dataArray) {
   const productHtml = `
-    <li class="splide__slide">        
-      <div class="product-card" id="${dataArray._id}">
-        <div class="product-card-ul">
-          <div class="product-img">
-            <a href="product-details.html" class="product-link" data-product-id="${dataArray._id}">
-              <img src="${dataArray.imageUrl}" alt="${dataArray.name}">
-            </a>
-          </div>
-          <div class="product-title">
-            ${dataArray.name}
-          </div>
-          <div class="product-price">৳ <span>${dataArray.price}</span></div>
-          <div class="product-bag">
-            <ion-icon class="card-icon" name="bag-outline"></ion-icon>ADD TO BAG
-          </div>
+          
+    <div class="product-card" id="${dataArray._id}">
+    <div class="product-card-ul">
+        <div class="product-img">
+        <a href="product-details.html" class="product-link" data-product-id="${dataArray._id}">
+        <img
+            src="${dataArray.imageUrl}"
+            alt="${dataArray.name}"
+        /></a>
         </div>
-      </div>
-    </li>
+        <div class="product-title">
+        ${dataArray.name}
+        </div>
+        <div class="product-price"><p class="product-price-cut">৳ 350</p>৳ <span>${dataArray.price}</span></div>
+        <div class="product-bag">
+        <ion-icon class="card-icon" name="bag-outline"></ion-icon>ADD TO
+        BAG
+        </div>
+    </div>
+    </div>
   `;
-  budgetTshirtsContainer.insertAdjacentHTML("beforeend", productHtml);
+  winterCollectionContainer.insertAdjacentHTML("beforeend", productHtml);
 };
 
 // Fetch data from API and render budget t-shirts dynamically
@@ -123,121 +58,46 @@ fetch("https://server231.cyclic.app/api/v1/products")
     let productArray = productContainer.products;
 
     for (let i = 0; i < productArray.length; i++) {
-      if (productArray[i].categoryName === "Budget T-Shirts") {
-        let datas1 = productArray[i];
-        renderBudgetTshirts(datas1);
+        if (productArray[i].categoryName === "Winter Collection") {
+            let datas3 = productArray[i];
+            renderWinterCollection(datas3);
       }
     }
 
-    // After rendering the slides, initialize the Splide carousel
-    new Splide("#splideBudget", {
-      type: "loop", // Infinite loop
-      // perPage: 3, // Number of slides per page
-      perMove: 1,
-      pagination: true,
-      perPage: 3, // Change this to the number of slides you want to display per page
-      focus: 0,
-      arrows: true, // Show navigation arrows
-      breakpoints: {
-        544: {
-          perPage: 1, // Number of slides per page on small screens
-        },
-        768: {
-          perPage: 1, // Number of slides per page on small screens
-        },
-        1100: {
-          perPage: 2,
-        },
-      },
-    }).mount();
-
-    for (let i = 0; i < productArray.length; i++) {
-      if (productArray[i].categoryName === "Premium T-Shirts") {
-        let datas2 = productArray[i];
-        renderPremiumTshirts(datas2);
-      }
-    }
-
-    // After rendering the slides, initialize the Splide carousel
-    new Splide("#splidePremium", {
-      focus: 0,
-      type: "loop", // Infinite loop
-      // perPage: 3, // Number of slides per page
-      perMove: 1,
-      pagination: true,
-      perPage: 3, // Change this to the number of slides you want to display per page
-      arrows: true, // Show navigation arrows
-      breakpoints: {
-        768: {
-          perPage: 1, // Number of slides per page on small screens
-        },
-        1100: {
-          perPage: 2,
-        },
-      },
-    }).mount();
-
-
-    for (let i = 0; i < productArray.length; i++) {
-      if (productArray[i].categoryName === "Winter Collection") {
-        let datas3 = productArray[i];
-        renderWinterCollection(datas3);
-      }
-    }
-
-    // After rendering the slides, initialize the Splide carousel
-    new Splide("#splideWinter", {
-      focus: 0,
-      type: "loop", // Infinite loop
-      // perPage: 3, // Number of slides per page
-      perMove: 1,
-      pagination: true,
-      perPage: 3, // Change this to the number of slides you want to display per page
-      arrows: true, // Show navigation arrows
-      breakpoints: {
-        768: {
-          perPage: 1, // Number of slides per page on small screens
-        },
-        1100: {
-          perPage: 2,
-        },
-      },
-    }).mount();
     // modal cart and shopping bag
     initCartModal();
 
-     // Attach event listeners to the "Add to Bag" buttons
-     const addToBagButtons = document.querySelectorAll(".product-bag");
-     addToBagButtons.forEach((button) => {
-       button.addEventListener("click", () => {
-         // Get the corresponding product details
-         const productCard = button.closest(".product-card");
-         const productId = productCard.id;
-         const productImgSrc = productCard.querySelector(".product-img img").src;
-         const productTitle =
-           productCard.querySelector(".product-title").textContent;
-         const productPrice = productCard.querySelector(
-           ".product-price span"
-         ).textContent;
- 
-         // Update the modal with the product details
-         const modal = document.querySelector(".cart-product-modal-container");
-         const modalImg = modal.querySelector(".cart-product-img img");
-         const modalTitle = modal.querySelector(".cart-product-title p");
-         modalImg.src = productImgSrc;
-         modalTitle.textContent = productTitle;
-         const modalPrice = modal.querySelector(".cart-product-price span");
-         modalPrice.textContent = productPrice;
- 
-         // Display the modal and the gray background overlay
-         modal.style.display = "flex";
-         const overlay = document.querySelector(".modal-overlay");
-         overlay.style.display = "block";
-         document.body.classList.add("modal-open");
-       });
-     });
-  });
+    // Attach event listeners to the "Add to Bag" buttons
+    const addToBagButtons = document.querySelectorAll(".product-bag");
+    addToBagButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Get the corresponding product details
+        const productCard = button.closest(".product-card");
+        const productId = productCard.id;
+        const productImgSrc = productCard.querySelector(".product-img img").src;
+        const productTitle =
+          productCard.querySelector(".product-title").textContent;
+        const productPrice = productCard.querySelector(
+          ".product-price span"
+        ).textContent;
 
+        // Update the modal with the product details
+        const modal = document.querySelector(".cart-product-modal-container");
+        const modalImg = modal.querySelector(".cart-product-img img");
+        const modalTitle = modal.querySelector(".cart-product-title p");
+        modalImg.src = productImgSrc;
+        modalTitle.textContent = productTitle;
+        const modalPrice = modal.querySelector(".cart-product-price span");
+        modalPrice.textContent = productPrice;
+
+        // Display the modal and the gray background overlay
+        modal.style.display = "flex";
+        const overlay = document.querySelector(".modal-overlay");
+        overlay.style.display = "block";
+        document.body.classList.add("modal-open");
+      });
+    });
+  });
 
 // // Function to initialize the cart modal
 function initCartModal() {
@@ -253,7 +113,7 @@ function initCartModal() {
   // Get the close icon and Cancel in the modal header
   const closeIcon = document.querySelector(".cart-product-modal-icon");
   const cancelModalButton = document.querySelector(".cancel-modal-button");
-  let productId = '';
+  let productId = "";
 
   // Add event listener to each "Add to Bag" button
   addToBagButtons.forEach((button) => {
@@ -380,28 +240,25 @@ function initCartModal() {
 
   // ... (Previous JavaScript code)
 
-// Update the event listener for the product links
-const productLinks = document.querySelectorAll(".product-link");
-productLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevent default link behavior
-    const productId = link.dataset.productId; // Get the product ID from the data attribute
+  // Update the event listener for the product links
+  const productLinks = document.querySelectorAll(".product-link");
+  productLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent default link behavior
+      const productId = link.dataset.productId; // Get the product ID from the data attribute
 
-    // Store the product ID in localStorage so it can be accessed on the product_details.html page
-    localStorage.setItem("selectedProductId", productId);
+      // Store the product ID in localStorage so it can be accessed on the product_details.html page
+      localStorage.setItem("selectedProductId", productId);
 
-    // Navigate to the product details page
-    // const productDetailsLink = document.getElementsByClassName("product-link");
-    // productDetailsLink.click();
-    window.location.href = `product-details.html?id=${productId}`;
+      // Navigate to the product details page
+      // const productDetailsLink = document.getElementsByClassName("product-link");
+      // productDetailsLink.click();
+      window.location.href = `../product-details.html?id=${productId}`;
+    });
   });
-});
 
-// ... (Remaining JavaScript code)
-
+  // ... (Remaining JavaScript code)
 }
-
-
 
 function addToBag(product) {
   let bagItems = JSON.parse(localStorage.getItem("bagItems")) || [];
@@ -558,7 +415,3 @@ if (tdElements) {
     }
   });
 }
-
-
-
-

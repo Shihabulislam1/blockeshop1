@@ -20,78 +20,15 @@ window.addEventListener("scroll", handleScroll);
 //  Render Products From Api
 
 const budgetTshirtsContainer = document.getElementById(
-  "budget-tshirt-wrapper-home"
-);
-const premiumTshirtsContainer = document.getElementById(
-  "premium-tshirt-wrapper-home"
-);
-const winterCollectionContainer = document.getElementById(
-  "winter-collection-wrapper-home"
+  "budget-page-container"
 );
 
-const renderWinterCollection = function (dataArray) {
-  const productHtml = `
-      <li class="splide__slide">        
-      <div class="product-card" id="${dataArray._id}">
-        <div class="product-card-ul">
-          <div class="product-img">
-            <a href="product-details.html" class="product-link" data-product-id="${dataArray._id}">
-            <img
-                src="${dataArray.imageUrl}"
-                alt="${dataArray.name}"
-            /></a>
-          </div>
-          <div class="product-title">
-             ${dataArray.name}
-          </div>
-          <div class="product-price"><p class="product-price-cut">৳ 350</p>৳ <span>${dataArray.price}</span></div>
-          <div class="product-bag">
-            <ion-icon class="card-icon" name="bag-outline"></ion-icon>ADD TO
-            BAG
-          </div>
-        </div>
-      </div>
-      </li>   
-`;
-  // before Start insert it
-
-  winterCollectionContainer.insertAdjacentHTML("beforeend", productHtml);
-};
-
-const renderPremiumTshirts = function (dataArray) {
-  const productHtml = `
-      <li class="splide__slide">        
-      <div class="product-card" id="${dataArray._id}">
-        <div class="product-card-ul">
-          <div class="product-img">
-            <a href="product-details.html" class="product-link" data-product-id="${dataArray._id}">
-            <img
-                src="${dataArray.imageUrl}"
-                alt="${dataArray.name}"
-            /></a>
-          </div>
-          <div class="product-title">
-             ${dataArray.name}
-          </div>
-          <div class="product-price"><p class="product-price-cut">৳ 350</p>৳ <span>${dataArray.price}</span></div>
-          <div class="product-bag">
-            <ion-icon class="card-icon" name="bag-outline"></ion-icon>ADD TO
-            BAG
-          </div>
-        </div>
-      </div>
-      </li>   
-`;
-  // before Start insert it
-
-  premiumTshirtsContainer.insertAdjacentHTML("beforeend", productHtml);
-};
 
 
 // Function to render budget t-shirts dynamically
 const renderBudgetTshirts = function (dataArray) {
   const productHtml = `
-    <li class="splide__slide">        
+          
       <div class="product-card" id="${dataArray._id}">
         <div class="product-card-ul">
           <div class="product-img">
@@ -108,7 +45,6 @@ const renderBudgetTshirts = function (dataArray) {
           </div>
         </div>
       </div>
-    </li>
   `;
   budgetTshirtsContainer.insertAdjacentHTML("beforeend", productHtml);
 };
@@ -129,80 +65,6 @@ fetch("https://server231.cyclic.app/api/v1/products")
       }
     }
 
-    // After rendering the slides, initialize the Splide carousel
-    new Splide("#splideBudget", {
-      type: "loop", // Infinite loop
-      // perPage: 3, // Number of slides per page
-      perMove: 1,
-      pagination: true,
-      perPage: 3, // Change this to the number of slides you want to display per page
-      focus: 0,
-      arrows: true, // Show navigation arrows
-      breakpoints: {
-        544: {
-          perPage: 1, // Number of slides per page on small screens
-        },
-        768: {
-          perPage: 1, // Number of slides per page on small screens
-        },
-        1100: {
-          perPage: 2,
-        },
-      },
-    }).mount();
-
-    for (let i = 0; i < productArray.length; i++) {
-      if (productArray[i].categoryName === "Premium T-Shirts") {
-        let datas2 = productArray[i];
-        renderPremiumTshirts(datas2);
-      }
-    }
-
-    // After rendering the slides, initialize the Splide carousel
-    new Splide("#splidePremium", {
-      focus: 0,
-      type: "loop", // Infinite loop
-      // perPage: 3, // Number of slides per page
-      perMove: 1,
-      pagination: true,
-      perPage: 3, // Change this to the number of slides you want to display per page
-      arrows: true, // Show navigation arrows
-      breakpoints: {
-        768: {
-          perPage: 1, // Number of slides per page on small screens
-        },
-        1100: {
-          perPage: 2,
-        },
-      },
-    }).mount();
-
-
-    for (let i = 0; i < productArray.length; i++) {
-      if (productArray[i].categoryName === "Winter Collection") {
-        let datas3 = productArray[i];
-        renderWinterCollection(datas3);
-      }
-    }
-
-    // After rendering the slides, initialize the Splide carousel
-    new Splide("#splideWinter", {
-      focus: 0,
-      type: "loop", // Infinite loop
-      // perPage: 3, // Number of slides per page
-      perMove: 1,
-      pagination: true,
-      perPage: 3, // Change this to the number of slides you want to display per page
-      arrows: true, // Show navigation arrows
-      breakpoints: {
-        768: {
-          perPage: 1, // Number of slides per page on small screens
-        },
-        1100: {
-          perPage: 2,
-        },
-      },
-    }).mount();
     // modal cart and shopping bag
     initCartModal();
 
@@ -393,7 +255,7 @@ productLinks.forEach((link) => {
     // Navigate to the product details page
     // const productDetailsLink = document.getElementsByClassName("product-link");
     // productDetailsLink.click();
-    window.location.href = `product-details.html?id=${productId}`;
+    window.location.href = `../product-details.html?id=${productId}`;
   });
 });
 

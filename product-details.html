@@ -13,6 +13,7 @@
     <!-- CSS file Link --> 
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product-page.css">
     <link rel="stylesheet" href="css/queries.css">
 
 
@@ -167,103 +168,146 @@
   </header>
 
   <main>
-    <section class="hero">
-      <picture>
-  <!-- Source for screens less than or equal to 576px -->
-  <source media="(max-width: 544px)" srcset="img/Promo_Phone2.jpg" >
-  <!-- Source for screens less than or equal to 768px -->
-  <source media="(max-width: 768px)" srcset="img/Promo_Phone2.jpg" >
-  <!-- Default source for screens larger than 768px -->
-  <img src="img/Landingpage2.jpg" alt="Image" class="hero-img">
-</picture>
-
-      <div class="hero-text-container">
-        <div class="hero-text">
-          <h1 class="heading-hero">
-            Fashion that reflects what your identities are.
-          </h1>
-          <p class="subheading-hero">
-            Step into a World of Personalized Fashion - <span class="hero-title">Blocke Shop</span>: Where Your Identity Finds Expression in Every Stitch
-          </p>
-          <div class="buttons-hero">
-            <a href="#new-arrival" class="btn-getStarted btn-hero">Get Started</a>
-            <a href="#" class="btn-learn btn-hero">New Arrivals</a>
-          </div>
-          <!-- <div class="return-link">
-            <ion-icon class="hero-icon" name="refresh-outline"></ion-icon>
-            <span >
-              7 Days Return Policy.
-            </span>
-          </div> -->
+    <!-- <div id="product-details-container"></div> -->
+    <!-- Product-Details Section -->
+    <section class="product-details">
+        <div class="product-details-img">
+            <img src="" alt="Gender Neutral Black Synthetic Science Edition T-Shirt - STRESS STRAIN CURVE">
         </div>
-        <div >
-
-        </div>
-      </div>
-      
-    </section>
-<section class="new-arrival" id="new-arrival">
-    
-      
-      <div class="title-btn-container">
-        <h2 class="title">Winter Collection</h2>
-        <a href="hoodie/1.html" class="btn-shop-all">View All</a>
-      </div>
-      <div class="line-black"></div> 
-        <div>
-          <div class="splide" id="splideWinter">
-            <div class="splide__track">
-              <ul class="splide__list" id="winter-collection-wrapper-home">
-               
-              </ul>
+        <div class="detailsCard">
+            <div class="title-price">
+                <h1 class="product-title-p">
+                    Gender Neutral Black Synthetic Science Edition T-Shirt - STRESS STRAIN CURVE
+                </h1>
+                <!-- <p class="product-price-cut">৳ 350</p> -->
+                <p class="product-price-p">
+                    ৳ <span >180</span>
+                </p>
             </div>
-          </div>
+            <div class="order-option">
+                <!-- Selecting Tshirt Size -->
+                <p class="size-select-text">
+                    Select Size:
+                </p>
+                <ul class="size-selectors-container list-inline">
+                  <li class="size-selector list-inline-item" data-size="S">
+                    S
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="M">
+                    M
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="L">
+                    L
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="XL">
+                    XL
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="XXL">
+                    XXL
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="XXXL">
+                    XXXL
+                  </li>
+                  </ul>
+                  <span class="no-size-selected" style="color:rgb(230, 28, 28); display:none; font-size: 1.4rem; margin:0.6rem 0">Please select a size &nbsp;<i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+                  
+                
+            </div>
+            <div class="quantity-selection">
+                <div class="number-input">
+                    <button class="minus-btn">-</button>
+                    <input type="number" class="input-field" value="1" min="1">
+                    <button class="plus-btn">+</button>
+                </div>
+                
+                <div class="addCArt">
+                    <button class="product-page-bag">
+                      <ion-icon class="product-card-icon" name="bag-outline"></ion-icon
+                      >Add to Bag
+                    </button>
+                  </div>
+            </div> 
+            <div class="horizon-line">
+                <hr>
+            </div>
+            <div class="product-infos">
+                <h4 class="product-info-title">
+                  Affordable Elegance for Extreme Comfort!
+                </h4>
+                <div class="product-info-descrip">
+                    <div class="product-dess">
+                        <p class="product-dess-p">
+                          Introducing the BlockeShop T-Shirt - Your Perfect Style Companion! Embrace the unbeatable combination of affordability and style with our budget-friendly masterpiece. The sleek and classic Black color exudes timeless elegance, while the Regular Fit ensures a flattering silhouette for everyone. Crafted from top-notch Synthetic fabric, this ultra-thin wonder promises unmatched comfort, even during scorching summers. With a remarkable GSM range of 150-160, it guarantees durability without compromising on breathability.<br><br>
+                          Elevate your fashion game while staying cool in extreme warmth. Experience fashion-forward comfort like never before with the BlockeShop T-Shirt - Your ultimate choice for style and ease!
+                        </p>
+                    </div>
+                    <h3 class="specs">
+                        Specifications:
+                    </h3>
+                    <p>
+                    <span class="product-info-bold">GSM:</span> 150- 160
+                    </p>
+                    <p>
+                    <span class="product-info-bold">Material:</span> Synthetic (ultra thin,  comfortable for extreme warm)
+                    </p>
+                    <p>
+                    <span class="product-info-bold">Fit type:</span> Regular Fit
+                    </p>
+                    <p>
+                    <span class="product-info-bold">Color :</span> Black</p>
+                </div>
+            </div> 
+            <div class="size-table">
+                <h5 class="size-title">
+                    Size chart - In inches:
+                </h5>
+                <table class="custom-table">
+                    <thead>
+                      <tr>
+                        <th>Size</th>
+                        <th>Chest (Round)</th>
+                        <th>Length</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>S</td>
+                        <td>35</td>
+                        <td>24</td>
+                      </tr>
+                      <tr>
+                        <td>M</td>
+                        <td>36</td>
+                        <td>26</td>
+                      </tr>
+                      <tr>
+                        <td>L</td>
+                        <td>38</td>
+                        <td>28</td>
+                      </tr>
+                      <tr>
+                        <td>XL</td>
+                        <td>40</td>
+                        <td>29</td>  
+                      </tr>
+                      <tr>
+                        <td>XXL</td>
+                        <td>42</td>
+                        <td>30</td>
+                      </tr>
+                      <tr>
+                        <td>XXXL</td>
+                        <td>44</td>
+                        <td>30</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+            </div>                
         </div>
-      </div>
     </section>
 
-
-
-
-    <section class="t-shirts" id="t-shirts">
-      <div class="title-btn-container">
-        <h2 class="title">Premium T-Shirts</h2>
-        <a href="premium-tshirts/1.html" class="btn-shop-all">View All</a>
-      </div>
-      <div class="line-black"></div>
-      
-      <div>
-        <div class="splide" id="splidePremium">
-          <div class="splide__track">
-            <ul class="splide__list" id="premium-tshirt-wrapper-home">
-             
-            </ul>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
-
-
-    <section class="Punjabi" id="Punjabi">
-      <div class="title-btn-container">
-        <h2 class="title">Budget T-Shirts</h2>
-        <a href="budget-tshirts/1.html" class="btn-shop-all">View All</a>
-      </div>
-      <div class="line-black"></div>
-      
-      <div>
-        <div class="splide" id="splideBudget">
-          <div class="splide__track">
-            <ul class="splide__list" id="budget-tshirt-wrapper-home">
-             
-            </ul>
-          </div>
-          
-        </div>
-      </div>
-      </div>
-    </section>
+ 
     
 
          <!-- CART Modal Window -->
@@ -477,11 +521,10 @@
     <!-- Splide -->
     
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
-     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
     
     <!-- Custom Js -->
-    <script src="JS/index.js"></script>
+    <script src="JS/product-details.js"></script>
     <script src="JS/product-page.js"></script>
 </body>
 </html>
