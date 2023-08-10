@@ -267,10 +267,129 @@
           <li>
             You will receive a refund anytime between 7-10 working days. If you
             don't receive a refund within this time, please write to us at
-            <a href="mailto:blockeshop@gmail.com">blockeshop@gmail.com</a> and
+            <a href="mailto:rezwanurrahman27@gmail.com">rezwanurrahman27@gmail.com</a> and
             we shall investigate.
           </li>
         </ul>
+      </div>
+
+
+
+      
+       <!-- CART Modal Window -->
+       <div class="cart-product-modal-container">
+        <div class="cart-product-header">
+          <p class="cart-product-header-text">Choose Size</p>
+          <ion-icon
+            class="cart-product-modal-icon"
+            name="close-outline"
+          ></ion-icon>
+        </div>
+        <div class="cart-product-modal">
+          <div class="cart-product-img">
+            <img
+              src="../img/T_shirts/Tshirt1/Tshirt_addv_Displacement.jpg"
+              alt=""
+            />
+          </div>
+          <div class="cart-product-side">
+            <div class="cart-product-title">
+              <p>The Stress Strain Curve T-Shirt - Black</p> 
+              <div class="cart-product-price">
+                ৳<span>685</span>
+              </div>
+            </div>
+           
+            <div class="cart-product-size">
+              <div class="order-option">
+                <!-- Selecting Tshirt Size -->
+                <p class="size-select-text">Choose Size:</p>
+                <ul class="size-selectors-container list-inline">
+                  <li class="size-selector list-inline-item" data-size="S">
+                    S
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="M">
+                    M
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="L">
+                    L
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="XL">
+                    XL
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="XXL">
+                    XXL
+                  </li>
+                  <li class="size-selector list-inline-item" data-size="XXXL">
+                    XXXL
+                  </li>
+                </ul>
+                <span
+                  class="no-size-selected"
+                  style="color: rgb(230, 28, 28);font-size: 1.2rem; display: none"
+                  >Please select a size &nbsp;<i
+                    class="fa fa-arrow-up"
+                    aria-hidden="true"
+                  ></i
+                ></span>
+              </div>
+            </div>
+            <div class="cart-product-quantity">
+              <div class="cart-product-quantity-text size-select-text">
+                Choose Quantity:
+              </div>
+              <div class="quantity-selection">
+                <div class="number-input">
+                  <button class="minus-btn">-</button>
+                  <input type="number" class="input-field" value="1" min="1" />
+                  <button class="plus-btn">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="cart-product-hr" />
+        <div class="cart-product-footer">
+          <button class="btn btn-danger cancel-modal-button">Cancel</button>
+
+          <div class="addCArt">
+            <button class="add-product-bag">
+              <ion-icon class="product-card-icon" name="bag-outline"></ion-icon
+              >Add to Bag
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add to BAg Section -->
+      <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" >
+        <div class="offcanvas-header bag-header">
+          <h5 class="offcanvas-title bag-title-cart" id="offcanvasRightLabel">
+            CART
+          </h5>
+          <ion-icon
+            name="close-sharp"
+            class="btn-bag-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close" id="close-offcanvas"
+          ></ion-icon>
+        </div>
+        <div class="offcanvas-body bag-canvas-body-container">
+          <div class="bag-canvas-body">
+            <div class="bag-render-wrapper">
+              <div class="bag-items"></div>
+            </div>
+            <div class="bag-product-footer">
+              <div class="bag-total">
+                <p>Cart Total:</p>
+                <p>৳ <span class="bag-total-price">0</span></p>
+              </div>
+              <div class="bag-checkout">
+                <a class="bag-checkout-link" href="checkout.html">Checkout</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -365,7 +484,7 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- Custom Js -->
-    <script src="JS/index.js"></script>
+    <!-- <script src="JS/index.js"></script> -->
     <script src="JS/product-page.js"></script>
   </body>
 </html>
