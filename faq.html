@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/faq.css">
 
 
 </head>
@@ -246,6 +247,38 @@
         </div>
 
     </section>
+
+
+    <!-- Add to BAg Section -->
+    <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" >
+      <div class="offcanvas-header bag-header">
+        <h5 class="offcanvas-title bag-title-cart" id="offcanvasRightLabel">
+          CART
+        </h5>
+        <ion-icon
+          name="close-sharp"
+          class="btn-bag-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close" id="close-offcanvas"
+        ></ion-icon>
+      </div>
+      <div class="offcanvas-body bag-canvas-body-container">
+        <div class="bag-canvas-body">
+          <div class="bag-render-wrapper">
+            <div class="bag-items"></div>
+          </div>
+          <div class="bag-product-footer">
+            <div class="bag-total">
+              <p>Cart Total:</p>
+              <p>৳ <span class="bag-total-price">0</span></p>
+            </div>
+            <div class="bag-checkout">
+              <a class="bag-checkout-link" href="checkout.html">Checkout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
 
