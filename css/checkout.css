@@ -10,6 +10,11 @@ input:valid {
 /* Styling of product */
 .free-delivery{
     color: #8b2727;
+    padding: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.6rem;
 }
 #checkout-page{
     background-color: #f5f5f5;
