@@ -177,22 +177,89 @@
 
     <main>
       <!-- Size guide Table -->
-      <div class="page">
-        <div class="page__demo">
-          <div class="main-container page__container">
-            
+      <div class="size-table">
+        <h5 class="size-title">
+            Size chart - In inches:
+        </h5>
+        <div class="table-container">
+
+        
+        <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Chest (Round)</th>
+                <th>Length</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>S</td>
+                <td>35</td>
+                <td>24</td>
+              </tr>
+              <tr>
+                <td>M</td>
+                <td>36</td>
+                <td>26</td>
+              </tr>
+              <tr>
+                <td>L</td>
+                <td>38</td>
+                <td>28</td>
+              </tr>
+              <tr>
+                <td>XL</td>
+                <td>40</td>
+                <td>29</td>  
+              </tr>
+              <tr>
+                <td>XXL</td>
+                <td>42</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>XXXL</td>
+                <td>48</td>
+                <td>30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div> 
+        
+
+
+    <!-- Add to BAg Section -->
+    <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasRight" >
+      <div class="offcanvas-header bag-header">
+        <h5 class="offcanvas-title bag-title-cart" id="offcanvasRightLabel">
+          CART
+        </h5>
+        <ion-icon
+          name="close-sharp"
+          class="btn-bag-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close" id="close-offcanvas"
+        ></ion-icon>
+      </div>
+      <div class="offcanvas-body bag-canvas-body-container">
+        <div class="bag-canvas-body">
+          <div class="bag-render-wrapper">
+            <div class="bag-items"></div>
+          </div>
+          <div class="bag-product-footer">
+            <div class="bag-total">
+              <p>Cart Total:</p>
+              <p>৳ <span class="bag-total-price">0</span></p>
+            </div>
+            <div class="bag-checkout">
+              <a class="bag-checkout-link" href="checkout.html">Checkout</a>
+            </div>
           </div>
         </div>
-        <footer class="footer">
-          <div class="main-container footer__container">
-            <span>Liked? Please, 
-              <a href="https://stas-melnikov.ru/donate/" rel="noopener noreferrer" target="_blank">look the page</a>      
-            </span>  
-            <a href="https://stas-melnikov.ru" class="melnik909" rel="noopener noreferrer" target="_blank">Developed by Stas Melnikov</a>
-          </div>
-        </footer>
       </div>
-        
+    </div>
     </main>
 
     <footer>
