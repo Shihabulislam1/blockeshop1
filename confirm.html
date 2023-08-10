@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/size.css" />
     <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/confirm.css">
   </head>
   <body>
     <header>
@@ -176,8 +177,11 @@
     </header>
 
     <main>
-      <h1>Order Confirmed</h1>
-        
+      <h1 class="confirm-order">Order Confirmed</h1>
+      <h1 class="reject-order">Order Rejected</h1>
+      <div id="order-container" class="container">
+        <!-- The user information and table will be inserted here dynamically using JavaScript -->
+      </div>
     </main>
 
     <footer>
@@ -271,7 +275,8 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- Custom Js -->
-    <script src="JS/index.js"></script>
-    <script src="JS/product-page.js"></script>
+    <!-- <script src="JS/index.js"></script> -->
+    <script src="JS/confirm.js"></script>
+    <!-- <script src="JS/product-page.js"></script> -->
   </body>
 </html>

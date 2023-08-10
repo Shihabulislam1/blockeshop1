@@ -1,0 +1,69 @@
+.confirm-order{
+    font-size: 3.6rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding:2.4rem;
+    color:rgb(24, 191, 24);
+}
+.reject-order{
+    font-size: 3.6rem;
+    font-weight: 600;
+    display: none;
+    justify-content: center;
+    align-items:center;
+    padding:2.4rem;
+    color:red;
+}
+.subheading-confirm-user{
+    font-size: 2.8rem;
+    color: #555;
+    font-weight: 500;
+
+    margin-top: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+#order-container div p{
+    font-size: 1.8rem;
+}
+
+#order-container div p span{
+    display: inline-block;
+    margin-right: 0.6rem;
+    font-size: 2.2rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.order-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2.4rem;
+    font-size: 1.8rem;
+}
+
+.order-table thead th{
+    font-size: 2.4rem;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.6rem;
+}
+
+tbody tr{
+    border: 1px solid #fff;
+    
+    font-size: 1.6rem;
+}
+tbody tr:nth-child(odd){
+    background-color: #f8f8f8;
+}
+tbody tr:nth-child(even){
+    background-color: #ddd;
+}
+tbody tr td{
+    padding: 0.6rem;
+    border: 2px solid #fff;
+}
