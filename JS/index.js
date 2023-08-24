@@ -44,7 +44,7 @@ const renderWinterCollection = function (dataArray) {
           <div class="product-title">
              ${dataArray.name}
           </div>
-          <div class="product-price"><p class="product-price-cut">৳ 350</p>৳ <span>${dataArray.price}</span></div>
+          <div class="product-price">৳ <span>${dataArray.price}</span></div>
           <div class="product-bag">
             <ion-icon class="card-icon" name="bag-outline"></ion-icon>ADD TO
             BAG

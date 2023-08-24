@@ -410,5 +410,29 @@
   .product-infos{
     padding-right: 2.4rem;
   }
+  .hero-text-container {
+    grid-row-start: 1;
+    /* top:20%; */
+    margin-top: 1%;
+    left :2%;
+    position: absolute;
+
+    padding: 2.4rem 2rem 1.2rem 0;
+    grid-template-columns: 2fr 1.5fr;
+  }
+}
+
+@media screen and (min-width:1400px) and (max-width:1600px) {
+  .hero-text-container {
+    grid-row-start: 1;
+    /* top:20%; */
+    margin-top: 2.5%;
+    left :2%;
+    position: absolute;
+
+    padding: 2.4rem 2rem 1.2rem 0;
+    grid-template-columns: 2fr 1.5fr;
+  }
+
 }
 
