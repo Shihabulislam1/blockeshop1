@@ -35,7 +35,7 @@ const renderWinterCollection = function (dataArray) {
       <div class="product-card" id="${dataArray._id}">
         <div class="product-card-ul">
           <div class="product-img">
-            <a href="product-details.html" class="product-link" data-product-id="${dataArray._id}">
+            <a href="product-details.html?id=${dataArray._id}" class="product-link" data-product-id="${dataArray._id}">
             <img
                 src="${dataArray.imageUrl}"
                 alt="${dataArray.name}"
@@ -64,7 +64,7 @@ const renderPremiumTshirts = function (dataArray) {
       <div class="product-card" id="${dataArray._id}">
         <div class="product-card-ul">
           <div class="product-img">
-            <a href="product-details.html" class="product-link" data-product-id="${dataArray._id}">
+            <a href="product-details.html?id=${dataArray._id}" class="product-link" data-product-id="${dataArray._id}">
             <img
                 src="${dataArray.imageUrl}"
                 alt="${dataArray.name}"
@@ -95,7 +95,7 @@ const renderBudgetTshirts = function (dataArray) {
       <div class="product-card" id="${dataArray._id}">
         <div class="product-card-ul">
           <div class="product-img">
-            <a href="product-details.html" class="product-link" data-product-id="${dataArray._id}">
+            <a href="product-details.html?id=${dataArray._id}" class="product-link" data-product-id="${dataArray._id}">
               <img src="${dataArray.imageUrl}" alt="${dataArray.name}">
             </a>
           </div>
@@ -560,5 +560,17 @@ if (tdElements) {
 }
 
 
+// Changing the Navbar Hoodie into Winter Collection
+const winterCollectionNav = document.querySelectorAll('.nav-link');
+winterCollectionNav.forEach(winterCollectionNav => {
+  if (winterCollectionNav.textContent === 'Hoodie') {
+    winterCollectionNav.textContent = 'Winter Collection';
+  }
+});
 
-
+const winterCollectionOffCan = document.querySelectorAll('.canvas-links-link');
+winterCollectionOffCan.forEach(winterCollectionOffCan=> {
+  if (winterCollectionOffCan.textContent === 'Hoodie') {
+    winterCollectionOffCan.textContent = 'Winter Collection';
+  }
+});

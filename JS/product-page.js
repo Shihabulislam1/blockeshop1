@@ -459,3 +459,31 @@ if (addToModalBagButtons2) {
 //     }
 //   });
 // }
+
+
+
+
+
+// Changing the Navbar Hoodie into Winter Collection
+const winterCollectionNav1 = document.querySelectorAll('.nav-link');
+winterCollectionNav1.forEach(winterCollectionNav1 => {
+  if (winterCollectionNav1.textContent === 'Hoodie') {
+    winterCollectionNav1.textContent = 'Winter Collection';
+  }
+});
+
+// Changing the OffCanvas Hoodie into Winter Collection
+const winterCollectionOffCan1 = document.querySelectorAll('.canvas-links-link');
+winterCollectionOffCan1.forEach(winterCollectionOffCan1 => {
+  if (winterCollectionOffCan1.textContent === 'Hoodie') {
+    winterCollectionOffCan1.textContent = 'Winter Collection';
+  }
+});
+
+// Changing the Footer Hoodie into Winter Collection
+const winterCollectionFooter1 = document.querySelectorAll('.footer-link');
+winterCollectionFooter1.forEach(winterCollectionFooter1 => {
+  if (winterCollectionFooter1.textContent === 'Hoodie') {
+    winterCollectionFooter1.textContent = 'Winter Collection';
+  }
+});

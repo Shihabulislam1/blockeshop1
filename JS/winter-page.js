@@ -28,7 +28,7 @@ const   renderWinterCollection= function (dataArray) {
     <div class="product-card" id="${dataArray._id}">
     <div class="product-card-ul">
         <div class="product-img">
-        <a href="product-details.html" class="product-link" data-product-id="${dataArray._id}">
+        <a href="../product-details.html?id=${dataArray._id}" class="product-link" data-product-id="${dataArray._id}">
         <img
             src="${dataArray.imageUrl}"
             alt="${dataArray.name}"

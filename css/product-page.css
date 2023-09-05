@@ -27,15 +27,18 @@
     margin-bottom: 1.6rem;
 }
 .product-price-p{
+  color: #c63837 ;
     font-size: 2.4rem;
     display: inline-block;
 }
 .product-price-p span{
+      color: #c63837 ;
       font-size: 2.4rem;
       font-weight: 500;
 }
 .product-price-p span{
     font-weight: 500;
+    color: #c63837;
 }
 
 /* Selecting Size */

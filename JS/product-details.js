@@ -340,11 +340,19 @@ function renderProductDetails(productData) {
   
   // ... (Remaining JavaScript code)
   
-
-  // product_details.js
-document.addEventListener("DOMContentLoaded", () => {
-    // Get the stored product ID from localStorage
-    const productId = localStorage.getItem("selectedProductId");
+  document.addEventListener("DOMContentLoaded", () => {
+    // Check if productId is already in localStorage
+    // let productId = localStorage.getItem("selectedProductId");
+  
+    // // If productId is not in localStorage, extract it from the URL
+    // if (!productId) {
+      const url = window.location.href;
+      const urlSearchParams = new URLSearchParams(url.split("?")[1]);
+      let productId = urlSearchParams.get("id");
+  
+      // Store the extracted productId in localStorage for future use
+      // localStorage.setItem("selectedProductId", productId);
+    // }
   
     // Fetch the product details from the API using the product ID
     fetch(`https://server231.cyclic.app/api/v1/products/${productId}`)
@@ -352,10 +360,30 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((data) => {
         // Pass the product data to the renderProductDetails function to display them
         renderProductDetails(data.payload.product);
-        console.log(data.payload.product);
+        document.title = `${data.payload.product.name}`
+        console.log(data.payload.product.name);
       })
       .catch((error) => {
-        console.error("Error fetching product details:", error);
+        alert("Product Not Found");
       });
   });
+  
+
+//   // product_details.js
+// document.addEventListener("DOMContentLoaded", () => {
+//     // Get the stored product ID from localStorage
+//     const productId = localStorage.getItem("selectedProductId");
+  
+//     // Fetch the product details from the API using the product ID
+//     fetch(`https://server231.cyclic.app/api/v1/products/${productId}`)
+//       .then((response) => response.json())
+//       .then((data) => {
+//         // Pass the product data to the renderProductDetails function to display them
+//         renderProductDetails(data.payload.product);
+//         console.log(data.payload.product);
+//       })
+//       .catch((error) => {
+//         console.error("Error fetching product details:", error);
+//       });
+//   });
   

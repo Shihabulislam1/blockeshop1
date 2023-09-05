@@ -43,12 +43,39 @@ em{
 
 .contact-link{
     text-decoration: none;
-    color:#1B5099 ;
+    color:#c63837;
     font-weight: 500;
 
 }
+
 .contact-link:hover{
     text-decoration: underline;
-    color:#1B5099 ;
+    color:#c63837 ;
     font-weight: 600;
+}
+
+.contact-links{
+    text-decoration: none;
+    color:#c63837 ;
+    font-weight: 500;
+}
+.contact-links:hover{
+    text-decoration: underline;
+    color:#c63837 ;
+    font-weight: 600;
+}
+
+
+.cancel-list{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    padding-left: 4.2rem;
+    padding-right:4.2rem;
+    margin-left: 3.6rem;
+    
+    color: black;
+}
+.cancel-list li{
+    line-height: 1.5;
+    margin-bottom: 0.9rem;
 }

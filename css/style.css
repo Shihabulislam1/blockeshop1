@@ -113,7 +113,7 @@ header {
 .canvas-links-item .canvas-links-link:link,
 .canvas-links-item .canvas-links-link:active {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 500;
   color: #C63837!important;
 }
