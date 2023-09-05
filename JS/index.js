@@ -136,7 +136,7 @@ fetch("https://server231.cyclic.app/api/v1/products")
       perMove: 1,
       pagination: true,
       perPage: 3, // Change this to the number of slides you want to display per page
-      focus: 0,
+      // focus: 0,
       arrows: true, // Show navigation arrows
       breakpoints: {
         544: {
@@ -160,7 +160,7 @@ fetch("https://server231.cyclic.app/api/v1/products")
 
     // After rendering the slides, initialize the Splide carousel
     new Splide("#splidePremium", {
-      focus: 0,
+      // focus: 0,
       type: "loop", // Infinite loop
       // perPage: 3, // Number of slides per page
       perMove: 1,
